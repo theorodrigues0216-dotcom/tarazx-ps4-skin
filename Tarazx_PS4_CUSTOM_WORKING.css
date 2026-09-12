@@ -1,0 +1,160 @@
+/* TARAZX PS4 - CUSTOM SKIN
+   Built from the Gamepad Viewer DualShock 4 layout.
+   The Tarazx PNG is the controller artwork; interactive elements remain active.
+*/
+.controller.custom {
+  width: 895px !important;
+  height: 658px !important;
+  background: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png?v=4") no-repeat center !important;
+  background-size: 895px 658px !important;
+}
+
+/* triggers */
+.custom .triggers {
+  width: 653px;
+  height: 99px;
+  position: absolute;
+  left: 121px;
+}
+.custom .trigger {
+  width: 110px;
+  height: 100%;
+  background: transparent !important;
+  opacity: 0;
+}
+.custom .trigger.left { float:left; }
+.custom .trigger.right { float:right; }
+
+/* bumpers */
+.custom .bumpers {
+  position:absolute;
+  width:653px;
+  height:25px;
+  left:121px;
+  top:103px;
+}
+.custom .bumper {
+  width:110px;
+  height:25px;
+  background:transparent !important;
+  opacity:0;
+}
+.custom .bumper.left { float:left; }
+.custom .bumper.right { float:right; }
+
+/* touchpad / PS */
+.custom .touchpad {
+  width:291px;
+  height:166px;
+  position:absolute;
+  left:302px;
+  top:134px;
+  background:transparent !important;
+}
+.custom .meta {
+  width:47px;
+  height:46px;
+  position:absolute;
+  left:424px;
+  bottom:238px;
+  background:transparent !important;
+}
+
+/* Share / Options */
+.custom .arrows {
+  position:absolute;
+  width:390px;
+  height:51px;
+  top:156px;
+  left:252px;
+}
+.custom .back, .custom .start {
+  width:31px;
+  height:51px;
+  background:transparent !important;
+  opacity:0;
+}
+.custom .back { float:left; }
+.custom .start { float:right; }
+
+/* face buttons */
+.custom .abxy {
+  position:absolute;
+  width:189px;
+  height:189px;
+  top:175px;
+  left:630px;
+}
+.custom .button {
+  position:absolute;
+  width:61px;
+  height:61px;
+  background:transparent !important;
+}
+.custom .a { bottom:0; left:64px; }
+.custom .b { top:64px; right:0; }
+.custom .x { top:64px; left:0; }
+.custom .y { top:0; left:64px; }
+
+/* D-pad */
+.custom .dpad {
+  position:absolute;
+  width:139px;
+  height:139px;
+  top:199px;
+  left:102px;
+}
+.custom .face {
+  position:absolute;
+  background:transparent !important;
+}
+.custom .face.up, .custom .face.down {
+  width:40px; height:58px;
+}
+.custom .face.left, .custom .face.right {
+  width:58px; height:40px;
+}
+.custom .face.up { left:49px; top:0; }
+.custom .face.down { left:49px; bottom:0; }
+.custom .face.left { top:50px; left:0; }
+.custom .face.right { top:50px; right:0; }
+
+/* analog sticks */
+.custom .sticks {
+  position:absolute;
+  width:401px;
+  height:116px;
+  top:338px;
+  left:253px;
+}
+.custom .stick {
+  position:absolute;
+  width:104px;
+  height:104px;
+  background:transparent !important;
+  border:3px solid transparent;
+  border-radius:50%;
+  box-sizing:border-box;
+}
+.custom .stick.left { top:0; left:0; }
+.custom .stick.right { top:calc(100% - 116px); left:calc(100% - 104px); }
+
+/* Subtle live feedback: pressed buttons glow instead of drawing the old PS4 artwork. */
+.custom .button.pressed,
+.custom .face.pressed,
+.custom .back.pressed,
+.custom .start.pressed,
+.custom .bumper.pressed,
+.custom .trigger.pressed,
+.custom .meta.pressed,
+.custom .touchpad.pressed {
+  opacity:1 !important;
+  background:rgba(0,120,255,.16) !important;
+  border:2px solid rgba(0,120,255,.65) !important;
+  box-shadow:0 0 10px rgba(0,120,255,.65);
+  box-sizing:border-box;
+}
+.custom .stick.pressed {
+  border-color:rgba(0,120,255,.75);
+  box-shadow:0 0 12px rgba(0,120,255,.7);
+}
