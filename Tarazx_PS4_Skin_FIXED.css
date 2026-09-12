@@ -1,0 +1,66 @@
+/* TARAZX PS4 - FIXED INTERACTIVE SKIN
+   Keeps the built-in Gamepad Viewer DS4 input logic, but uses the Tarazx artwork
+   as the visible controller body. Interactive elements are transparent at rest
+   and show a small glow when pressed/moved.
+*/
+.controller.ds4 {
+  width: 895px !important;
+  height: 658px !important;
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png?v=5") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 895px 658px !important;
+  box-shadow: none !important;
+}
+
+/* Keep the original DS4 layout positions, but remove its artwork. */
+.controller.ds4 .trigger,
+.controller.ds4 .bumper,
+.controller.ds4 .button,
+.controller.ds4 .face,
+.controller.ds4 .back,
+.controller.ds4 .start,
+.controller.ds4 .touchpad,
+.controller.ds4 .meta {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Pressed buttons: small Tarazx-style blue highlight instead of the old PS4 art. */
+.controller.ds4 .trigger.pressed,
+.controller.ds4 .bumper.pressed,
+.controller.ds4 .button.pressed,
+.controller.ds4 .face.pressed,
+.controller.ds4 .back.pressed,
+.controller.ds4 .start.pressed,
+.controller.ds4 .touchpad.pressed,
+.controller.ds4 .meta.pressed {
+  opacity: 1 !important;
+  background-image: none !important;
+  background-color: rgba(0, 120, 255, .30) !important;
+  border: 2px solid rgba(0, 150, 255, .85) !important;
+  box-shadow: 0 0 12px rgba(0, 130, 255, .75) !important;
+  box-sizing: border-box !important;
+}
+
+/* Analog sticks: hide the old stick artwork but retain the live stick element. */
+.controller.ds4 .stick {
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 3px solid transparent !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+}
+
+.controller.ds4 .stick.pressed,
+.controller.ds4 .stick:hover {
+  border-color: rgba(0, 130, 255, .85) !important;
+  box-shadow: 0 0 12px rgba(0, 130, 255, .75) !important;
+}
+
+/* Do not show the old disconnected controller artwork. */
+.controller.ds4.disconnected {
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png?v=5") !important;
+}
+.controller.ds4.disconnected div { display: none !important; }
