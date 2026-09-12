@@ -1,0 +1,77 @@
+/* TARAZX - FINAL EDIT CSS
+   Keeps Gamepad Viewer input logic while using the Tarazx artwork as the body.
+*/
+
+/* Tarazx artwork */
+.controller.ds4.edit,
+.controller.ds4 {
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 830px 609px !important;
+  box-shadow: none !important;
+}
+
+/* Remove the built-in PS4 artwork from interactive parts,
+   but DO NOT hide the elements themselves: Gamepad Viewer needs
+   those elements to receive pressed/axis state changes. */
+.controller.ds4 .face,
+.controller.ds4 .dpad,
+.controller.ds4 .stick,
+.controller.ds4 .start,
+.controller.ds4 .select,
+.controller.ds4 .touchpad,
+.controller.ds4 .meta,
+.controller.ds4 .bumper,
+.controller.ds4 .trigger,
+.controller.ds4 .shoulder,
+.controller.ds4 .led {
+  background-image: none !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: transparent !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Keep the live interactive elements subtle and invisible at rest. */
+.controller.ds4 .face,
+.controller.ds4 .dpad,
+.controller.ds4 .stick,
+.controller.ds4 .start,
+.controller.ds4 .select,
+.controller.ds4 .touchpad,
+.controller.ds4 .meta,
+.controller.ds4 .bumper,
+.controller.ds4 .trigger,
+.controller.ds4 .shoulder,
+.controller.ds4 .led {
+  opacity: 0.01 !important;
+}
+
+/* Live press feedback: a glow appears without replacing the Tarazx art. */
+.controller.ds4 .face.pressed,
+.controller.ds4 .dpad.pressed,
+.controller.ds4 .start.pressed,
+.controller.ds4 .select.pressed,
+.controller.ds4 .touchpad.pressed,
+.controller.ds4 .meta.pressed,
+.controller.ds4 .bumper.pressed,
+.controller.ds4 .trigger.pressed,
+.controller.ds4 .shoulder.pressed {
+  opacity: 1 !important;
+  background: rgba(80, 170, 255, 0.22) !important;
+  border: 2px solid rgba(80, 170, 255, 0.85) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 12px rgba(80, 170, 255, 0.9) !important;
+}
+
+/* Analogs: preserve the real Gamepad Viewer movement/transform,
+   while making the normal element visually transparent. */
+.controller.ds4 .stick.pressed {
+  opacity: 1 !important;
+  background: rgba(80, 170, 255, 0.18) !important;
+  border: 2px solid rgba(80, 170, 255, 0.85) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 12px rgba(80, 170, 255, 0.9) !important;
+}
