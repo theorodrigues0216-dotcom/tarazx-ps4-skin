@@ -1,0 +1,40 @@
+/* Tarazx PS4 Skin - clean edit
+   Keeps Gamepad Viewer live input, while removing the idle duplicate controls
+   that sit on top of the Tarazx artwork.
+*/
+.controller.ds4 {
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 830px 609px !important;
+  box-shadow: none !important;
+}
+
+/* Hide the built-in idle artwork so the Tarazx artwork is clean. */
+.ds4 .face,
+.ds4 .button,
+.ds4 .back,
+.ds4 .start,
+.ds4 .trigger,
+.ds4 .bumper,
+.ds4 .touchpad,
+.ds4 .meta {
+  opacity: 0 !important;
+}
+
+/* Show the live control only while it is being pressed. */
+.ds4 .face.pressed,
+.ds4 .button.pressed,
+.ds4 .back.pressed,
+.ds4 .start.pressed,
+.ds4 .trigger.pressed,
+.ds4 .bumper.pressed,
+.ds4 .touchpad.pressed,
+.ds4 .meta.pressed {
+  opacity: 1 !important;
+}
+
+/* Keep the live analog sticks visible so their movement can still be seen. */
+.ds4 .stick {
+  opacity: 1 !important;
+}
