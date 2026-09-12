@@ -1,0 +1,55 @@
+/* TARAZX PS4 - CLEAN V2
+   Tarazx artwork stays as the base.
+   Gamepad Viewer keeps the live input elements visible.
+*/
+.controller.ds4 {
+  width: 806px !important;
+  height: 598px !important;
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 806px 598px !important;
+}
+
+/* Hide duplicate artwork from Gamepad Viewer. */
+.ds4 .button,
+.ds4 .face,
+.ds4 .trigger,
+.ds4 .bumper,
+.ds4 .back,
+.ds4 .start,
+.ds4 .touchpad,
+.ds4 .meta {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Keep the sticks visible so their movement can be seen. */
+.ds4 .stick {
+  background-image: none !important;
+  background-color: rgba(0,140,255,.18) !important;
+  border: 3px solid rgba(0,140,255,.9) !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+}
+
+/* Press feedback. */
+.ds4 .button.pressed,
+.ds4 .face.pressed,
+.ds4 .touchpad.pressed {
+  box-shadow: 0 0 0 3px rgba(0,140,255,.9), 0 0 14px rgba(0,140,255,.9) !important;
+}
+
+.ds4 .stick.pressed {
+  box-shadow: 0 0 0 4px rgba(0,140,255,.9), 0 0 16px rgba(0,140,255,.9) !important;
+}
+
+/* Keep shoulder/trigger input elements active but invisible. */
+.ds4 .trigger,
+.ds4 .bumper,
+.ds4 .back,
+.ds4 .start,
+.ds4 .meta {
+  opacity: 0 !important;
+}
