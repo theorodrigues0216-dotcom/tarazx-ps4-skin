@@ -1,0 +1,51 @@
+/* TARAZX PS4 - CLEAN EDIT CSS
+   Tarazx artwork is the base image. Gamepad Viewer elements stay active
+   but their original artwork is hidden, so inputs still react without duplicates.
+*/
+
+.controller.ds4 {
+  width: 806px !important;
+  height: 598px !important;
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 806px 598px !important;
+  box-shadow: none !important;
+}
+
+/* Remove Gamepad Viewer's duplicate drawings. */
+.ds4 .button,
+.ds4 .face,
+.ds4 .stick,
+.ds4 .trigger,
+.ds4 .bumper,
+.ds4 .back,
+.ds4 .start,
+.ds4 .touchpad,
+.ds4 .meta {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Keep the interactive elements present, but do not paint a second controller. */
+.ds4 .trigger,
+.ds4 .bumper,
+.ds4 .back,
+.ds4 .start,
+.ds4 .meta {
+  opacity: 0 !important;
+}
+
+/* Live input feedback: blue glow appears only while a control is pressed. */
+.ds4 .button.pressed,
+.ds4 .face.pressed {
+  box-shadow: 0 0 0 3px rgba(0,140,255,.9), 0 0 14px rgba(0,140,255,.9) !important;
+}
+
+.ds4 .stick.pressed {
+  box-shadow: 0 0 0 4px rgba(0,140,255,.9), 0 0 16px rgba(0,140,255,.9) !important;
+}
+
+.ds4 .touchpad.pressed {
+  box-shadow: 0 0 0 3px rgba(0,140,255,.85), 0 0 16px rgba(0,140,255,.8) !important;
+}
