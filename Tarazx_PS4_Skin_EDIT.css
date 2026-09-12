@@ -1,0 +1,10 @@
+/* Tarazx PS4 skin - EDIT CSS version
+   Keeps the original PS4 Gamepad Viewer skin active so button/analog animations continue working.
+*/
+.controller.ds4 {
+  background-image: url("https://theorodrigues0216-dotcom.github.io/tarazx-ps4-skin/Tarazx_PS4_skin_preserve_icon_white.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 830px 609px !important;
+  box-shadow: none !important;
+}
